@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>list of users</title>
+</head>
+<body>
+	<div class="container">
+<br>
+<br>
+
+<div ng-app ="myApp" ng-controller="UserController as vm" ng-init="vm.fetchAllUsers()">
+<div class="table-responsive">
+<table class="table table-hover table-striped ">
+    <thead>
+      <tr>
+        <th>UserID</th>
+        <th>Name</th>
+        <th>ADDRESS</th>
+        <th>CONTACT</th>
+        <th>ROLE</th>
+      </tr>
+    </thead>
+    <tbody>
+   		<tr ng-repeat="u in vm.users">
+   			<td>{{u.id}}</td>
+   			<td>{{u.name}}</td>
+   			<td>{{u.address}}</td>
+   			<td>{{u.contact}}</td>
+   			<td>{{u.role}}</td>		 
+   		</tr>
+		</tbody>	
+	</table>
+</div>
+</div>
+</div>
+	
+	
+	
+	
+</body>
+</html>
